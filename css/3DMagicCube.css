@@ -1,0 +1,79 @@
+*{
+    text-align: center;
+}
+h2{
+    margin-top: 60px ;
+}
+.view{
+    width: 162px;
+    height: 162px;
+    position: relative;
+    margin: 100px auto; /*容器居中*/
+}
+.box{
+    width: 162px;
+    height: 162px;
+    position: absolute;
+    -webkit-transform-style: preserve-3d;/*开启3d*/
+    -webkit-transform: rotateY(225deg) rotateZ(135deg);/*设置起始角度*/
+    -webkit-transform-origin: 100px 100px 0;/*设置旋转原点*/
+    -webkit-animation-name: animation;/*开启动画*/
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 3s;
+
+}
+.div1{
+    width: 162px;
+    height: 162px;
+    position: absolute;
+    -webkit-transform-origin: 162px 162px 0;
+}
+.div2{
+    width: 50px;
+    height: 50px;
+    margin: 1px;
+    border: 1px solid yellow;
+    border-radius: 10px;
+    float: left;
+}
+.red .div2{
+    background-color: #ff0000;
+}
+.orange .div2{
+    background-color: #ff9900;
+}
+.white .div2{
+    background-color: #800080;
+}
+.yellow .div2{
+    background-color: #ffff00;
+}
+.green .div2{
+    background-color: #00ff00;
+}
+.blue .div2{
+    background-color: #0000ff;
+}
+.red{
+    -webkit-transform: translateZ(162px);
+}
+.white{
+    -webkit-transform: translateY(-162px)  rotateX(-90deg);  /**/
+}
+.yellow{
+    -webkit-transform:  rotateX(-90deg);
+}
+.green{
+    -webkit-transform: rotateY(90deg);
+}
+.blue{
+    -webkit-transform:translateX(-162px) rotateY(90deg) ;
+}
+@-webkit-keyframes animation {
+    16%{-webkit-transform: rotateY(-90deg)}
+    33%{-webkit-transform: rotateY(-90deg) rotateZ(135deg)}
+    33%{-webkit-transform: rotateY(225deg) rotateZ(135deg)}
+    33%{-webkit-transform: rotateY(135deg) rotateX(135deg)}
+    33%{-webkit-transform: rotatex(135deg)}
+}
